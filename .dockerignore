@@ -4,4 +4,3 @@ Vagrantfile
 install-docker.sh
 temp*
 *.sublime-*
-aws_credentials
