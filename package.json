@@ -1,0 +1,24 @@
+{
+  "name": "Odin",
+  "version": "1.0.0",
+  "description": "Dynamic DNS client for AWS Route53",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "node ./npm_scripts/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-vicar/odin.git"
+  },
+  "author": "Scott Vickers",
+  "license": "MIT",
+  "devDependencies": {
+    "bluebird": "^2.9.34",
+    "fs-extra": "^0.22.1",
+    "vagrant-docker": "git+https://github.com/code-vicar/vagrant-docker.git"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1.40"
+  }
+}
