@@ -19,6 +19,9 @@
     "vagrant-docker": "git+https://github.com/code-vicar/vagrant-docker.git"
   },
   "dependencies": {
-    "aws-sdk": "^2.1.40"
+    "aws-sdk": "^2.1.40",
+    "bluebird": "^2.9.34",
+    "fs-extra": "^0.22.1",
+    "request-promise": "^0.4.2"
   }
 }

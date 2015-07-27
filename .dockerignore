@@ -1,4 +1,5 @@
 .vagrant
+log
 node_modules
 Vagrantfile
 install-docker.sh
