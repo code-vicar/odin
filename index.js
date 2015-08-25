@@ -4,12 +4,15 @@ var BBPromise = require('bluebird');
 var request = require('request-promise');
 var fs = BBPromise.promisifyAll(require('fs-extra'));
 
+var env = require('./lib/env');
+
 /**
  * Log file tracking last known external IP
  *
  * @type const {String}
  */
-var IP_LOG = './log/ip.json';
+var LOGFILE = './log/history.txt';
+var IPFILE = './log/ip.txt';
 
 function log() {
   if (process.env.NODE_ENV === 'production') {
@@ -33,14 +36,14 @@ function getExternalIp() {
 }
 
 function ensureLogFile() {
-  return fs.ensureFileAsync(IP_LOG);
+  return fs.ensureFileAsync(IPFILE);
 }
 
 function getLastKnownIP() {
 
   function readFile() {
-    return fs.readJsonAsync(IP_LOG).then(function (obj) {
-      return obj.lastKnownIP;
+    return fs.readFileAsync(IPFILE).then(function (data) {
+      return data;
     }).catch(function (err) {
       //Error reading the file
       log('Error reading file', err);
@@ -55,12 +58,10 @@ function getLastKnownIP() {
 function saveLastKnownIP(ip) {
 
   function writeFile() {
-    return fs.writeJsonAsync(IP_LOG, {
-      lastKnownIP: ip
-    });
+    return fs.writeFileAsync(IPFILE, ip);
   }
 
-  log('updating ' + IP_LOG + ' with latest IP', ip);
+  log('updating ' + IPFILE + ' with latest IP', ip);
   return ensureLogFile().then(writeFile);
 }
 
