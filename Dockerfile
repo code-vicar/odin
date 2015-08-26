@@ -6,7 +6,7 @@ RUN useradd -m odin
 USER odin
 WORKDIR /home/odin
 
-ADD .
+ADD . .
 
 RUN npm install --production
 

@@ -1,0 +1,14 @@
+odin:
+  image: svickers/odin:lastest
+  environment:
+    #- LOG_DIR=./log
+    #- LOG_IP_FILENAME=ip.txt
+    #- LOG_HISTORY_FILENAME=history.txt
+    - ROUTE53_ZONEID=<Your zoneid here>
+    - ROUTE53_RECORDSET=<Your recordset here>
+    #- ROUTE53_TTL=300
+    #- ROUTE53_COMMENT="Auto updating @ `date`"
+    #- ROUTE53_TYPE=A
+    - AWS_ACCESS_KEY_ID=<Your aws key here>
+    - AWS_SECRET_ACCESS_KEY=<Your aws secret here>
+    #- AWS_DEFAULT_REGION=us-west-2

@@ -2,7 +2,5 @@
 log
 node_modules
 Vagrantfile
-install-docker.sh
-temp*
 *.sublime-*
-aws_credentials
+docker-compose.yml

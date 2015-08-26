@@ -1,7 +1,13 @@
+.dockerignore
+Dockerfile
 .vagrant
 log
 node_modules
 Vagrantfile
-install-docker.sh
-temp*
 *.sublime-*
+test
+.jsbeautifyrc
+.jshintrc
+.editorconfig
+docker-compose*
+.gitignore
