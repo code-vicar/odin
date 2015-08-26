@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "node ./npm_scripts/postinstall.js"
+    "postinstall": "vagrant-docker"
   },
   "repository": {
     "type": "git",
@@ -14,9 +14,11 @@
   "author": "Scott Vickers",
   "license": "MIT",
   "devDependencies": {
+    "@code-vicar/vagrant-docker": "^1.1.0",
     "bluebird": "^2.9.34",
+    "chai": "^3.2.0",
     "fs-extra": "^0.22.1",
-    "vagrant-docker": "git+https://github.com/code-vicar/vagrant-docker.git"
+    "rewire": "^2.3.4"
   },
   "dependencies": {
     "aws-sdk": "^2.1.40",
