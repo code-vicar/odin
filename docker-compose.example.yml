@@ -1,5 +1,5 @@
 odin:
-  image: svickers/odin:lastest
+  image: svickers/odin:latest
   environment:
     # AWS Settings
     - AWS_ACCESS_KEY_ID=<Your aws key here>
